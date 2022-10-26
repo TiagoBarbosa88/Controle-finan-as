@@ -1,18 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-
-* {
-  border: none;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-}
 body {
+  background: rgb(67, 68, 68);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
 }
+
 label {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
   color: #fff;
 }
 
@@ -20,36 +17,15 @@ form {
   width: 300px;
 }
 
-input,
-button {
-  padding: 10px;
+.form-field {
   margin-bottom: 10px;
+}
+input {
+  border: none;
   border-radius: 5px;
+}
+input{
+  padding: 10px;
   width: -webkit-fill-available;
 }
 
-button {
-  cursor: pointer;
-}
-
-button[disabled] {
-  opacity: 0.7;
-}
-
-button:active {
-  opacity: 0.8;
-}
-.clean {
-  background: transparent;
-  color: #fff;
-}
-
-.entrar {
-  background: #fff;
-}
-
-.register {
-  background: transparent;
-  color: #fff;
-  border: 1px solid white;
-}

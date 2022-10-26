@@ -1,0 +1,36 @@
+button {
+  padding: 10px;
+  width: -webkit-fill-available;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+button:active {
+  opacity: 0.8;
+}
+button[disabled] {
+  opacity: 0.8;
+}
+
+.clear {
+  background: transparent;
+  border: none;
+  color: white;
+}
+.solid {
+  background: white;
+  border: none;
+  color: rgb(37, 39, 38);
+}
+.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.error {
+  background: rgb(233, 146, 146);
+  color: white;
+  display: none;
+  border-radius: 5px;
+}
