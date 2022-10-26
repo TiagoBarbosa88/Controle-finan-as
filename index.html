@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login - Controle de gastos</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <div><label>Email</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()" />
+        </div>
+        <div>
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" placeholder="Sua senha" onchange="validateFields()"/>
+        </div>
+        <div>
+            <button type="button" class="clean" id="recover-password-button" disabled="true">Recuperar Senha</button>
+        </div>
+        <div>
+            <button type="button" class="entrar" id="login-button" disabled="true">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="register">Registrar</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
