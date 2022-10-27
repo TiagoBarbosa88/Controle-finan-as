@@ -10,7 +10,7 @@
     <title>Login - Controle de gastos</title>
 </head>
 
-<body>
+<body class="centralize">
     <form>
         <div class="form-field">
             <div><label>Email</label></div>
@@ -24,7 +24,8 @@
             <div class="error" id="password-required-error">Senha é obrigatória</div>
         </div>
         <div>
-            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
+            <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()"
+                disabled="true">Recuperar senha</button>
         </div>
         <div>
             <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
@@ -36,6 +37,27 @@
 
     <script src="script.js"></script>
     <script src="validations.js"></script>
+    <script src="loading.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD0uGXTcdeVkxTzmS3A5cUELsDZAboW2ZM",
+            authDomain: "controle-de-gastos-339da.firebaseapp.com",
+            projectId: "controle-de-gastos-339da",
+            storageBucket: "controle-de-gastos-339da.appspot.com",
+            messagingSenderId: "728093315397",
+            appId: "1:728093315397:web:27df1201b0b48ad505ee2c"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+
 </body>
+
+
 
 </html>
