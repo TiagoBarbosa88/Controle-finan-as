@@ -25,6 +25,12 @@ function login() {
     });
 }
 
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    window.location.href = "../pages/home/home.html";
+  }
+});
+
 function register() {
   showLoading();
   window.location.href = "pages/register/register.html";
