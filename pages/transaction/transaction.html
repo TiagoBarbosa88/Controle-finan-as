@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="transaction.css">
+    <title>Transação - Controle de gastos</title>
+</head>
+
+<body>
+    <header>
+        <button type="button" onclick="logout()">Sair</button>
+    </header>
+
+    <main class="centralize">
+    <form >
+        <div class="form-field">
+            <div><label>Transação</label></div>
+            <input type="radio" name="type" checked id="expense"><label for="expense">Despesa</label>
+            <input type="radio" name="type" id="income"><label for="income">Receita</label>
+        </div>
+        <div class="form-field">
+            <div><label>Data daTransação</label></div>
+            <input type="date">
+        </div>
+        <div class="form-field">
+            <div><label>Moeda</label></div>
+            <select>
+                <option>Dólar</option>
+                <option>Euro</option>
+                <option selected>Real</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <div><label>Valor</label></div>
+            <input type="number">
+        </div>
+        <div class="form-field">
+            <div><label>Tipo de Transação</label></div>
+            <select>
+                <option>-- Selecione um tipo de transação --</option>
+                <option>Acomodação</option>
+                <option>Transporte</option>
+                <option>Salário</option>
+                <option>Supermercado</option>
+                <option>Outros</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <div><label>Descrição</label></div>
+            <input type="text">
+        </div>
+        <button type="button" class="solid">Salvar</button>
+        <button type="button" class="clear">Cancelar</button>
+
+    </form>
+</main>
+
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
+<script src="../../firebase-init.js"></script>
+<script src="transaction.js"></script>
+<script src="../../auth-guard.js"></script>
+<script src="../../loading.js"></script>
+
+
+</html>
