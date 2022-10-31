@@ -16,59 +16,67 @@
     </header>
 
     <main class="centralize">
-    <form >
-        <div class="form-field">
-            <div><label>Transação</label></div>
-            <input type="radio" name="type" checked id="expense"><label for="expense">Despesa</label>
-            <input type="radio" name="type" id="income"><label for="income">Receita</label>
-        </div>
-        <div class="form-field">
-            <div><label>Data daTransação</label></div>
-            <input type="date">
-        </div>
-        <div class="form-field">
-            <div><label>Moeda</label></div>
-            <select>
-                <option>Dólar</option>
-                <option>Euro</option>
-                <option selected>Real</option>
-            </select>
-        </div>
-        <div class="form-field">
-            <div><label>Valor</label></div>
-            <input type="number">
-        </div>
-        <div class="form-field">
-            <div><label>Tipo de Transação</label></div>
-            <select>
-                <option>-- Selecione um tipo de transação --</option>
-                <option>Acomodação</option>
-                <option>Transporte</option>
-                <option>Salário</option>
-                <option>Supermercado</option>
-                <option>Outros</option>
-            </select>
-        </div>
-        <div class="form-field">
-            <div><label>Descrição</label></div>
-            <input type="text">
-        </div>
-        <button type="button" class="solid">Salvar</button>
-        <button type="button" class="clear">Cancelar</button>
+        <form>
+            <div class="form-field">
+                <div><label>Transação *</label></div>
+                <input type="radio" name="type" checked id="expense"><label for="expense">Despesa</label>
+                <input type="radio" name="type" id="income"><label for="income">Receita</label>
+            </div>
+            <div class="form-field">
+                <div><label>Data da transaçao *</label></div>
+                <input type="date" onchange="onChangeDate()" id="date">
+                <div class="error" id="date-required-error">Data é obrigatório / inválida</div>
+            </div>
+            <div class="form-field">
+                <div><label>Moeda *</label></div>
+                <select>
+                    <option value="USD">Dólar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="BRL" selected>Real</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <div><label>Valor *</label></div>
+                <input type="number" onchange="onChangeValue()" id="value">
+                <div class="error" id="value-required-error">
+                    Valor é obrigatório </div>
+                <div class="error" id="value-less-or-equal-to-zero-error">
+                    Valor deve ser maior que zero</div>
 
-    </form>
-</main>
+            </div>
+            <div class="form-field">
+                <div><label>Tipo de Transação *</label></div>
+                <select onchange="onChangeTransactionType()" id="transaction-type">
+                    <option value="">-- Selecione um tipo de transação --</option>
+                    <option>Acomodação</option>
+                    <option>Transporte</option>
+                    <option>Salário</option>
+                    <option>Supermercado</option>
+                    <option>Outros</option>
+                </select>
+                <div class="error" id="transaction-type-required-error">
+                    Tipo de transação é obrigatório </div>
+            </div>
+            <div class="form-field">
+                <div><label>Descrição</label></div>
+                <input type="text">
+            </div>
+            <button type="button" class="solid" disabled id="save-button">Salvar</button>
+            <button type="button" class="clear">Cancelar</button>
+
+        </form>
+    </main>
 
 
 
 </body>
-<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
 <script src="../../firebase-init.js"></script>
-<script src="transaction.js"></script>
 <script src="../../auth-guard.js"></script>
 <script src="../../loading.js"></script>
+<script src="transaction.js"></script>
 
 
 </html>
