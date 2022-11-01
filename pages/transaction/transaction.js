@@ -12,6 +12,9 @@ const form = {
     valueRequiredError: () => document.getElementById('value-required-error'),
     valueLessOrEqualToZeroError: () => document.getElementById('value-less-or-equal-to-zero-error')
 }
+
+
+
 if (!isNewTransaction()) {
     const uid = getTransactionUid();
     findTransactionByUid(uid);
