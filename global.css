@@ -80,11 +80,12 @@ input[type="radio"]{
   background: transparent;
   border: none;
   color: white;
-}
+  }
 .solid {
   background: white;
   border: none;
   color: rgb(37, 39, 38);
+ margin-bottom: 10px;
 }
 .outline {
   background: transparent;
@@ -102,4 +103,8 @@ border-color: red;
   color: white;
   display: none;
   border-radius: 5px;
+}
+
+.login {
+  color: #fff;
 }
