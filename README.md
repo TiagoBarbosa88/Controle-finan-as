@@ -11,4 +11,4 @@
 * Projeto feito em aula com o Paulo Alves Dev
 
 
-[Confira a aplicação](https://https-github-com-tiago-barbosa88-controle-finan-as.vercel.app/)
+[Confira a aplicação](https://controle-financas-chi.vercel.app/)
